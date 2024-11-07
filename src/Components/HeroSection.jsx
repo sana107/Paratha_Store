@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import About from "./About";
 import Services from "./Services";
 import AvailableOn from "./AvailableOn";
+import {thali} from "./src/assets/images/thali_img.png"
 
 const HeroSection = () => {
   const { mode } = useSelector((state) => state.darkMode);
@@ -45,7 +46,7 @@ const HeroSection = () => {
           <img
             id="thali"
             className="object-cover h-[250px] w-[350px] md:h-[350px] md:w-[500px] lg:h-[450px] lg:w-[600px] mt-4 lg:mt-16"
-            src="./thali_img.png"
+            src={thali}
             alt="A delicious thali of paratha"
           />
         </div>
