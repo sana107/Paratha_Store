@@ -1,0 +1,34 @@
+#Logoji{
+    height: 75px;
+    width: 190px;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+#cart_icon{
+    /* padding-top: 100; */
+    padding-right: 2%;
+}
+#divji{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+#hero_Section{
+    background-image: url('./src/assets/images/depositphotos_11aloo-paratha.jpg');
+
+}
+#thali{
+    padding-top: 25px;
+}
+h3{
+    padding-bottom: 20px;
+}
+#right_side{
+   display: flex;
+   align-items: start;
+   padding-left: 10%;
+}
+#about_head{
+    font-size: 18px;
+}
