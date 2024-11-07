@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import About from "./About";
 import Services from "./Services";
 import AvailableOn from "./AvailableOn";
-import {thali} from "./src/assets/images/thali_img.png"
+import thali from "../assets/images/thali.png"
 
 const HeroSection = () => {
   const { mode } = useSelector((state) => state.darkMode);
