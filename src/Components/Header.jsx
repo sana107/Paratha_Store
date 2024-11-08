@@ -6,6 +6,7 @@ import { toggleDarkMode } from "./Features/theme/ThemeSlice";
 import { FaRegSun } from "react-icons/fa";
 import { FaRegMoon } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import myimage from "../assets/images/myImage.png";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ const Header = () => {
   return (
     <header className="flex align-center justify-between px-4 bg-bermuda_">
       <div className="flex align-center justify-center">
-        <img id="Logoji" src="./myImage.png" alt="Description" />
+        <img id="Logoji" src={myimage} alt="Description" />
       </div>
 
       <div id="divji" className="flex align-center justify-between">

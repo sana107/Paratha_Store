@@ -5,6 +5,7 @@ import Services from "./Services";
 import AvailableOn from "./AvailableOn";
 import thali from "../assets/images/thali.png"
 
+
 const HeroSection = () => {
   const { mode } = useSelector((state) => state.darkMode);
 
