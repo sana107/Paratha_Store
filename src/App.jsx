@@ -8,7 +8,8 @@ import About from "./Components/About";
 import Footer from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PageNotFound from "./Components/PageNotFound";
-import Addtocart from "./Components/AddCart";
+// import Addtocart from "./Components/AddCart";
+import Addincart from "./Components/Addincart";
 
 const App = () => {
   return (
@@ -21,7 +22,8 @@ const App = () => {
         <Route path="/service" element={<Services />} />
         <Route path="/" element={<HeroSection />} />
         <Route path="/contact" element={<AvailableOn />} />
-        <Route path="/AddCart" element={<Addtocart/>} />
+        {/* <Route path="/AddCart" element={<Addtocart/>} /> */}
+        <Route path ="/cart" element={<Addincart/>}/>
       </Routes>
 
       <Footer />

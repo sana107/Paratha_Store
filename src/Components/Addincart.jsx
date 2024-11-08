@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 
 
-const Addtocart = () => {
+const Addincart = () => {
 
 
   // Initial state for products in the cart
@@ -279,4 +279,4 @@ const Addtocart = () => {
   );
 };
 
-export default Addtocart;
+export default Addincart;
