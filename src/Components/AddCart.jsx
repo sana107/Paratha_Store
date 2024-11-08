@@ -1,18 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
-import { getCart } from "./Features/Cart/CartSlice";
+
 
 const Addtocart = () => {
 
-  const dispatch = useDispatch();
-  const { mode } = useSelector((state) => state.darkMode);
-  const {allcart} = useSelector((state) => state.cart);
 
-  useEffect(() => {
-    dispatch(getCart());
-  }, [dispatch]);
 
 
   // Initial state for products in the cart
@@ -26,7 +19,7 @@ const Addtocart = () => {
   // Functions to handle quantity changes
   const handleQuantityChange = (id, amount) => {
     setCart(
-      allcart.map((item) =>
+      cart.map((item) =>
         item.id === id
           ? { ...item, quantity: Math.max(1, item.quantity + amount) }
           : item
@@ -37,7 +30,7 @@ const Addtocart = () => {
   // Function to handle extra sauce toggle
   const handleExtraSauceToggle = (id)=> {
     setCart(
-      allcart.map((item) =>
+      cart.map((item) =>
         item.id === id ? { ...item, extraSauce: !item.extraSauce } : item
       )
     );
@@ -54,8 +47,8 @@ const Addtocart = () => {
   };
 
   // Calculate total
-  const totalItems = allcart.reduce((acc, item) => acc + item.quantity, 0);
-  const subtotal = allcart.reduce(
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+  const subtotal = cart.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
   );
@@ -105,7 +98,7 @@ const Addtocart = () => {
               {totalItems} Items
             </h2>
 
-            {allcart.map((item) => (
+            {cart.map((item) => (
               <div
                 key={item.id}
                 className={
