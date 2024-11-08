@@ -7,8 +7,7 @@ import Services from "./Components/Services";
 import About from "./Components/About";
 import Footer from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import PageNotFound from "./Components/PageNotFound";
-// import Addtocart from "./Components/AddCart";
+// import PageNotFound from "./Components/PageNotFound";
 import Addincart from "./Components/Addincart";
 
 const App = () => {
@@ -17,12 +16,11 @@ const App = () => {
       <Header />
       <Navbar />
       <Routes>
-        <Route path="*" element={<PageNotFound />} />
+        {/* <Route path="*" element={<PageNotFound />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<Services />} />
         <Route path="/" element={<HeroSection />} />
         <Route path="/contact" element={<AvailableOn />} />
-        {/* <Route path="/AddCart" element={<Addtocart/>} /> */}
         <Route path ="/cart" element={<Addincart/>}/>
       </Routes>
 
