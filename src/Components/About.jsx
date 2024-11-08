@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import blackimage from "../assets/images/aboutus4.jpg";
 
 const About = () => {
   const { mode } = useSelector((state) => state.darkMode);
@@ -46,7 +47,7 @@ const About = () => {
             <div className="flex justify-center lg:justify-start w-full lg:w-auto mb-4 lg:mb-0">
               <img
                 id="thali"
-                src="./aboutus4.jpg"
+                src={blackimage}
                 alt="Our paratha story"
                 className="object-cover h-[250px] w-[300px] md:h-[300px] md:w-[350px] lg:h-[400px] lg:w-[450px] ml-0 lg:ml-16 mt-4"
               />
