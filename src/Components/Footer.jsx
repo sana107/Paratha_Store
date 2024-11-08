@@ -140,7 +140,7 @@ const Footer = () => {
                       className=" hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                       href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
                     >
-                      MIT License
+                      YUM YUM License
                     </a>
                   </li>
                   <li>
