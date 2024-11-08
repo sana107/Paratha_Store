@@ -35,7 +35,7 @@ const Addtocart = () => {
   };
 
   // Function to handle extra sauce toggle
-  const handleExtraSauceToggle = (id) => {
+  const handleExtraSauceToggle = (id)=> {
     setCart(
       allcart.map((item) =>
         item.id === id ? { ...item, extraSauce: !item.extraSauce } : item
@@ -87,7 +87,7 @@ const Addtocart = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8">
-          {/*Product List*/}
+          {/* Product List */}
           <div
             className={
               mode
@@ -174,7 +174,7 @@ const Addtocart = () => {
             ))}
           </div>
 
-          {/*Order Summary*/}
+          {/* Order Summary */}
           <div
             className={
               mode
