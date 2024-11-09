@@ -32,3 +32,12 @@ h3{
 #about_head{
     font-size: 18px;
 }
+#mygif{
+    width:50% ;
+    height: 50%;
+    border: none;
+}
+
+#count_btn{
+    background-color: red;
+}

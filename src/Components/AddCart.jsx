@@ -70,7 +70,7 @@ const Addtocart = () => {
           >
             Shopping Cart
           </h1>
-          <Link to="/Service" className="text-indigo-600">
+          <Link to="/service" className="text-indigo-600">
             <div className="flex justify-center items-center">
               <FaArrowLeft /> &nbsp; Continue Shopping
             </div>

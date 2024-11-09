@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCart } from "./Features/Cart/CartSlice";
+import Card from "./Card";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const Services = () => {
   const dispatch = useDispatch();
@@ -11,6 +15,15 @@ const Services = () => {
   useEffect(() => {
     dispatch(getCart());
   }, [dispatch]);
+
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: "ease-out-back",
+      delay: 200,
+    });
+  }, []);
 
   return (
     <div>
@@ -56,42 +69,9 @@ const Services = () => {
               : "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full bg-white"
           }
         >
-          {allcart?.map((product) => (
-            <div
-              key={product.id}
-              className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-            >
-              <a href="#">
-                <img
-                  className="p-8 rounded-t-lg"
-                  src={product.img} // Assuming 'img' contains the image URL
-                  alt={product.name} // Displaying name in alt text
-                />
-              </a>
-              <div className="px-5 pb-5">
-                <a href="#">
-                  <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                    {product.name} {/* Displaying product name */}
-                  </h5>
-                </a>
-                <div className="flex items-center mt-2.5 mb-5">
-                  {/* Rating can be added here if available, else hardcoded as 5.0 */}
-                  <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">
-                    5.0 {/* Default rating */}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-3xl font-bold text-gray-900 dark:text-white">
-                  ₹{product.price} {/* Displaying price */}
-                  </span>
-                  <a
-                    href="#"
-                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  >
-                    Add to cart
-                  </a>
-                </div>
-              </div>
+          {allcart?.map((item) => (
+            <div key={item.id} data-aos ="fade-up">
+              <Card item = {item}/>
             </div>
           ))}
         </div>

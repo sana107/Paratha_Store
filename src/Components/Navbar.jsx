@@ -3,8 +3,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-
-const {mode} = useSelector((state)=>state.darkMode)
+  const { mode } = useSelector((state) => state.darkMode);
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-gray-100 py-2 lg:px-12 shadow border-solid border-t-1 ">
@@ -18,12 +17,13 @@ const {mode} = useSelector((state)=>state.darkMode)
           >
             Home
           </Link>
-          <Link
-            to="/about"
+
+          <a
+            href="/about"
             className=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-bermuda_  mr-2"
           >
             About
-          </Link>
+          </a>
           <Link
             to="/service"
             className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-bermuda_  mr-2"
