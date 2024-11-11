@@ -18,12 +18,12 @@ const Navbar = () => {
             Home
           </Link>
 
-          <a
-            href="/about"
+          <Link
+            to="/about"
             className=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-bermuda_  mr-2"
           >
             About
-          </a>
+          </Link>
           <Link
             to="/service"
             className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-bermuda_  mr-2"
