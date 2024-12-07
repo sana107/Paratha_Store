@@ -8,9 +8,17 @@ import {
   removeItem,
 } from "../Components/Features/Cart/CartSlice";
 import empty from "../assets/images/empty.png";
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from "react-toastify";
 
 const Addincart = () => {
   const dispatch = useDispatch();
+
+
+  const handleOrder = (item) => {
+   
+    toast.success("order placed");
+  };
 
   const { products } = useSelector((state) => state.cart);
 
@@ -169,7 +177,7 @@ const Addincart = () => {
             <span>₹{totalCost}</span>
           </div>
 
-          <button className="w-full bg-indigo-600 text-white py-2 mt-6 rounded-lg hover:bg-indigo-700">
+          <button className="w-full bg-indigo-600 text-white py-2 mt-6 rounded-lg hover:bg-indigo-700" onClick={() => handleOrder()}>
             Confirm Order
           </button>
         </div>

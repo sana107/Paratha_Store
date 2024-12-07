@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 
-@keyframes spin {
+/* @keyframes spin {
     from {
       transform: rotate(0deg);
     }
@@ -16,4 +16,7 @@
   }
   .spin {
     animation: spin 40s linear infinite;
-  }
+  } */
+
+
+  

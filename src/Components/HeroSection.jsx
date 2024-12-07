@@ -23,8 +23,8 @@ const HeroSection = () => {
           <h1
             className={
               mode
-                ? "text-4xl md:text-6xl lg:text-[94px] font-bold pl-4 lg:pl-16 pt-5 text-bermuda_"
-                : "text-4xl md:text-6xl lg:text-[94px] font-bold pl-4 lg:pl-16 pt-5"
+                ? "text-4xl md:text-6xl lg:text-[94px] font-bold pl-4 lg:pl-16 pt-16 text-bermuda_"
+                : "text-4xl md:text-6xl lg:text-[94px] font-bold pl-4 lg:pl-16 pt-16"
             }
           >
             PARATHA
@@ -43,10 +43,10 @@ const HeroSection = () => {
             every layer!"
           </p>
         </div>
-        <div className="flex justify-center lg:justify-end w-full lg:w-auto mt-6 lg:mt-0">
+        <div className="flex justify-center lg:justify-end w-full lg:w-auto mt-6 lg:mt-0 lg:mr-16 ">
           <img
             id="thali"
-            className="object-cover h-[250px] w-[350px] md:h-[350px] md:w-[500px] lg:h-[450px] lg:w-[600px] mt-4 lg:mt-16"
+            className="object-cover h-[250px] w-[350px] md:h-[300px] md:w-[300px] lg:h-[350px] lg:w-[450px] mt-4 lg:mt-16 animate-spin-slow"
             src={thali}
             alt="A delicious thali of paratha"
           />

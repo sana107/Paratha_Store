@@ -15,6 +15,9 @@ export default {
       colors: {
         'bermuda_': '#fdc546',
       },
+      animation: {
+        'spin-slow': 'spin 8s linear infinite',
+      },
     },
   },
   plugins: [],
